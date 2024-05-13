@@ -13,11 +13,12 @@ async def on_ready():
     
 @bot.command()
 async def mina(ctx):
-    await ctx.send(f'Hola, soy un bot de la contminación, mi nombre es {bot.user}')
+    await ctx.send(f'Hola, soy un bot de la contaminación 🪷, mi nombre es {bot.user} ')
     
 @bot.command()
 async def contaminacion(ctx):
     num = random.randint(1,3)
+    await ctx.send('Sus efectos son perjudiciales para la salud, biodiversidad y los ecosistemas, además de contribuir al cambio climático y otros problemas ambientales')
     if num == 1:
         with open('img/agua.jpg', 'rb') as f:
             picture = discord.File(f)
@@ -37,7 +38,7 @@ async def plastico(ctx):
     if numero == 1:
         await ctx.send('Tarda hasta 450 años en desintegrarse')
     elif numero == 2:
-        await ctx.send('Un millón de botellas de plástico por minuto')
+        await ctx.send('Se tiran un millón de botellas de plástico por minuto')
         with open('img/botellas.jpg', 'rb') as f:
             picture = discord.File(f)
         await ctx.send(file=picture)
@@ -62,9 +63,15 @@ async def agua(ctx):
         await ctx.send(file=picture)
     if nume == 2:
         await ctx.send('Casi 2 billones de personas en el planeta no tienen acceso al agua potable')
+        with open('img/nopotable.jpg', 'rb') as f:
+                picture = discord.File(f)
+        await ctx.send(file=picture)
     if nume == 3:
         await ctx.send('Las enfermedades provocadas por el agua contaminada han matado a más seres humanos que cualquier guerra')
-    
+        with open('img/niñ.jpg', 'rb') as f:
+                picture = discord.File(f)
+        await ctx.send(file=picture)
+        
 @bot.command()
 async def suelo(ctx):
     numer = random.randint(1,3)
@@ -87,7 +94,7 @@ async def aire(ctx):
                 picture = discord.File(f)
         await ctx.send(file=picture)
     elif nur == 2:
-        await ctx.send('Puede contener partículas microscópicas tan pequeñas que pueden penetrar en los pulmones y llegar al torrente sanguíneo')
+        await ctx.send('Puede contener particulas microscopicas de diferentes materiales perjudiciales, tan pequeños que pueden penetrar los pulmones y llegar al torrente sanguineo')
     
 @bot.command()
 async def comandos(ctx):
